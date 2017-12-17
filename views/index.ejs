@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>时光爱人</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../plugins/css/mdui.css?v=<%=package.version%>">
+    <link rel="stylesheet" href="../css/layout.css?v=<%=package.version%>">
+</head>
+
+<body>
+
+    <div class="mdui-container-fluid">
+
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <!-- logo -->
+        <a href="<%= home %>" class='logo-link'>
+            <img src="../imgs/logo-new.png" alt="logo" />
+        </a>
+        <!-- 登录相关 -->
+        <span class='login'>
+            <span>
+                <% if(userName){ %>
+                    <span>
+                        <%=userName %>
+                    </span>
+                    <% }else{ %>
+                        <a class="ftime-layout-create" href="/">注册</a>
+                        <a class="ftime-layout-login" href="/">登录</a>
+                        <% } %>
+            </span>
+            <a class="ftime-layout-logout" href="/logout_user">
+                <i class="icon-out"></i>
+            </a>
+        </span>
+    </header>
+    <!-- 侧边栏 -->
+    <aside>
+        <div class="ftime-layout-aside">
+            <ul class="ftime-layout-tree">
+                <% menus.forEach(function(val,index,items){ %>
+                    <li>
+                        <a data-href="<%= val.url %>" class="ftime-layout-link">
+                            <i class="<%= val.icons %>" aria-hidden="true"></i>
+                            <label>
+                                <span>
+                                    <%=val.pageName %>
+                                </span>
+                            </label>
+                            <% if(val.hasTag){%>
+                                <span>#</span>
+                                <% } %>
+                        </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+        <div class="ftime-layout-footer">
+            <span class="ftime-layout-version">Version:</span>
+            <%=package.version%>
+        </div>
+    </aside>
+    <!-- 内容主体 -->
+    <section class="ftime-layout-content">
+
+    </section>
+    <script type="text/javascript" src="../plugins/js/mdui.js?v=<%=package.version%>"></script>
+    <script type="text/javascript" src="../js/index.js?v=<%=package.version%>"></script>
+</body>
+
+</html>

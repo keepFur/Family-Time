@@ -1,0 +1,22 @@
+.game{
+    height: 300px;
+    text-align: center;
+    margin: 0px auto;
+    }
+    .game-board{
+    height: 300px;
+    margin:100px;
+    }
+    .game-info{
+        border: 1px solid #dedede;
+        text-align: left;
+    }
+    a{
+        cursor: pointer;
+        text-decoration-line: none;
+        color: #df5959;
+    }
+    .game-status{
+        text-align: center;
+        color: #dd0e0e;
+    }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>时光爱人</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="../plugins/css/flyer.all.min.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../plugins/css/font-awesome.min.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../plugins/css/animate.min.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/send_email.css?v=<%=package.version %>" rel="stylesheet">
+    <link rel="stylesheet" href="../css/add_template.css?v=<%=package.version %>" rel="stylesheet">
+    <link rel="stylesheet" href="../css/add_route.css?v=<%=package.version %>">
+    <link rel="stylesheet" href="../css/frame.css?v=<%=package.version %>">
+    <link type="text/css" href="../css/layout.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/home.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/sensitive_word.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/change_signs.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/receiving_email_rules.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/creat_receiving_email_rule.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/my_folder.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/other_email.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/change_email.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/add_folder.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/editor_folder.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/font.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/frame_insert.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/email_detail_two.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/upload.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/customer_complaint_history.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/public_butModal.css?v=<%=package.version %>" rel="stylesheet">
+    <link type="text/css" href="../css/index.css?v=<%=package.version %>" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <!-- logo -->
+        <a href="<%= home %>" class='logo-link'>
+            <img src="../imgs/logo-new.png" alt="logo" />
+        </a>
+        <!-- 登录相关 -->
+        <span class='login'>
+            <span>
+                <%= username %>
+            </span>
+            <a href="/logout_user">
+                <i class="icon-out"></i>
+            </a>
+        </span>
+    </header>
+    <!-- 侧边栏 -->
+    <aside>
+        <div class="flyer-layout-aside">
+            <ul class="flyer-layout-tree">
+                <% menus.forEach(function(val,index,items){ %>
+                    <li>
+                        <a data-href="<%= val.url %>" class="flyer-layout-link">
+                            <i class="<%= val.icons %>" aria-hidden="true"></i>
+                            <label class="i18n" data-i18nKey="<%= val.pageName %>"></label>
+                            <% if(val.hasTag){%>
+                                <span>#</span>
+                                <% } %>
+                        </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+        <div>
+        </div>
+    </aside>
+    <!-- 内容主体 -->
+    <section class="flyer-layout-content">
+
+    </section>
+    <footer>
+        <span class="footer-brand">Version:
+            <span class="version-icon">
+                <span class='version-update'></span>
+                <%=package.version %>
+            </span>
+        </span>
+        <span class="footer-brand">
+            <strong class="text-danger">AUKEY</strong>
+        </span>
+        <p class="no-margin">
+            ©2017
+            <strong>AUKEY</strong>. ALL Rights Reserved.
+        </p>
+    </footer>
+    <div class="flyer-hidden-data">
+        <input type="hidden" id="__roles" value="<%= JSON.stringify(roles)%>">
+        <input type="hidden" id="__username" value="<%= username%>">
+        <input type="hidden" id="__email" value="<%= email %>">
+        <input type="hidden" id="__userid" value="<%= userid %>">
+        <input type="hidden" id="__groups" value="<%= escape(JSON.stringify(groups)) %>">
+        <input type="hidden" id="__groupsAll" value="<%= escape(JSON.stringify(groupsAll)) %>">
+        <input type="hidden" id="__AccountList" value="">
+        <input type="hidden" id="__VersionDesc" value="<%= package.description %>">
+        <input type="hidden" id="__isMulti" value="<%= isMulti %>">
+    </div>
+    <script type="text/javascript" src="../plugins/js/jquery.min.js?v=<%=package.version %>"></script>
+    <script type="text/javascript" src="../plugins/js/flyer.all.js?v=<%=package.version %>"></script>
+    <script type="text/javascript" src="../plugins/js/echarts.simple.min.js?v=<%=package.version %>"></script>
+    <script type="text/javascript" src="../js/core.js?v=<%=package.version %>"></script>
+    <script type="text/javascript" src="../js/index.js?v=<%=package.version %>"></script>
+</body>
+
+</html>

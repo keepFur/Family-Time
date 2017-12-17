@@ -1,0 +1,25 @@
+.square{
+    width: 120px;
+    height: 100px;
+    box-sizing: border-box;
+    opacity:.8;
+    background: #2cc3a9;
+    border: 1px solid #404746;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 2px;
+    user-select: none;
+    outline: 0;
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+}
