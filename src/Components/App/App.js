@@ -20,12 +20,15 @@ export default App;
 
 
 
-// import React from 'react'
+// import React from 'react';
 // import {
 //     BrowserRouter as Router,
 //     Route,
 //     Link
-// } from 'react-router-dom'
+// } from 'react-router-dom';
+// import About from '../RouterExample/about.js';
+// import Index from '../RouterExample/index.js';
+// import Topics from '../RouterExample/topics.js';
 
 // const BasicExample = () => (
 //     <Router>
@@ -45,17 +48,7 @@ export default App;
 //     </Router>
 // )
 
-// const Home = () => (
-//     <div>
-//         <h2>Home</h2>
-//     </div>
-// )
 
-// const About = () => (
-//     <div>
-//         <h2>About</h2>
-//     </div>
-// )
 
 // const Topics = ({ match }) => (
 //     <div>

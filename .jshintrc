@@ -1,11 +1,9 @@
 {
   "globals": {
-    "flyer": false,
     "window": false,
     "document": false,
     "$": false,
-    "console": false,
-    "core": false
+    "console": false
   },
   "bitwise": true,
   "curly": true,

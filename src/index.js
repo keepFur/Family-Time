@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter,HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route } from 'react-router-dom';
 import './index.css';
-import App from './Components/App/App.js';
+// import App from './Components/App/App.js';
+// import App from './Components/RouterExpamle/app.js';
+// import App from './Components/RouterExpamle/Auth.js';
+// import App from './Components/RouterExpamle/CustomerLink.js';
+// import App from './Components/RouterExpamle/PreventingTransitionsExample.js';
+// import App from './Components/RouterExpamle/NoMatchExample.js';
+// import App from './Components/RouterExpamle/RecursiveExample.js';
+// import App from './Components/RouterExpamle/SidebarExample.js';
+// import App from './Components/RouterExpamle/AnimationExample.js';
+// import App from './Components/RouterExpamle/AmbiguousExample.js';
+// import App from './Components/RouterExpamle/RouteConfigExample.js';
+import App from './Components/RouterExpamle/ModalGallery.js';
 import Content from './Components/Content/Content.js';
 import registerServiceWorker from './Util/registerServiceWorker';
-ReactDOM.render(
-    <BrowserRouter>
-        <Route exact path="/" component={App} />
-    </BrowserRouter>,
-    document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
