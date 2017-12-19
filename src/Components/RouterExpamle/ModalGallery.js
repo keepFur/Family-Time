@@ -36,7 +36,7 @@ const IMAGES = [
     { id: 1, title: 'Lime Green', color: 'LimeGreen' },
     { id: 2, title: 'Tomato', color: 'Tomato' },
     { id: 3, title: 'Seven Ate Nine', color: '#789' },
-    { id: 4, title: 'Crimson', color: 'Crimson0' }
+    { id: 4, title: 'Crimson', color: 'Crimson00' }
 ]
 
 const Thumbnail = ({ color }) =>
